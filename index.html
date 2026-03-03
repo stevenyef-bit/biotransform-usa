@@ -64,7 +64,7 @@
         .btn-whatsapp-pulse { animation: pulse-green 2s infinite; }
     </style>
 </head>
-<body class="antialiased w-full overflow-x-hidden">
+<body class="antialiased w-full">
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
@@ -72,14 +72,14 @@
     </div>
 
     <nav class="bg-white border-b-2 border-slate-100 sticky top-0 z-50 shadow-sm w-full">
-        <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-md">
-                    <i class="fa-solid fa-dna text-white text-xl"></i>
+        <div class="max-w-6xl mx-auto px-4 md:px-5 py-3 md:py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2 md:space-x-3">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-md shrink-0">
+                    <i class="fa-solid fa-dna text-white text-lg md:text-xl"></i>
                 </div>
-                <span class="text-2xl font-black text-slate-900 tracking-tight">Bio<span class="text-blue-600">Transform</span></span>
+                <span class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Bio<span class="text-blue-600">Transform</span></span>
             </div>
-            <a href="#diagnostico" class="bg-blue-600 text-white font-extrabold px-6 py-3 rounded-xl text-lg hover:bg-blue-700 shadow-md transition-colors whitespace-nowrap">
+            <a href="#diagnostico" class="bg-blue-600 text-white font-extrabold px-4 py-2 md:px-6 md:py-3 rounded-lg md:rounded-xl text-sm md:text-lg hover:bg-blue-700 shadow-md transition-colors whitespace-nowrap shrink-0">
                 Evaluación
             </a>
         </div>
@@ -112,7 +112,7 @@
 
             <div class="space-y-12 mb-16">
                 
-                <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm overflow-hidden">
+                <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm relative">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-green-100 rounded-full flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-leaf text-5xl md:text-7xl text-green-600"></i>
@@ -144,9 +144,9 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm relative overflow-hidden">
-                    <div class="absolute -top-4 right-5 md:right-10 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-black px-6 py-2 rounded-full text-sm shadow-lg transform rotate-2">MÁS POPULAR</div>
-                    <div class="flex flex-col md:flex-row gap-8 items-start mt-6 md:mt-0">
+                <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm relative mt-10">
+                    <div class="absolute -top-5 right-5 md:right-10 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-black px-6 py-2 rounded-full text-sm shadow-lg transform rotate-2 z-10">MÁS POPULAR</div>
+                    <div class="flex flex-col md:flex-row gap-8 items-start pt-2">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-bolt text-5xl md:text-7xl text-blue-600"></i>
                         </div>
@@ -177,7 +177,7 @@
                     </div>
                 </div>
 
-                <div class="bg-pink-50/50 border-2 border-pink-200 rounded-3xl p-6 md:p-10 shadow-sm overflow-hidden">
+                <div class="bg-pink-50/50 border-2 border-pink-200 rounded-3xl p-6 md:p-10 shadow-sm relative">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-pink-100 rounded-full flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-spa text-5xl md:text-7xl text-pink-500"></i>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
 
-                <div class="bg-red-50/40 border-2 border-red-200 rounded-3xl p-6 md:p-10 shadow-sm overflow-hidden">
+                <div class="bg-red-50/40 border-2 border-red-200 rounded-3xl p-6 md:p-10 shadow-sm relative">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-red-100 rounded-full flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-fire text-5xl md:text-7xl text-red-600"></i>
@@ -252,7 +252,6 @@
             <p class="text-center text-xl text-slate-400 mb-12 font-semibold px-2">Clic en la foto para ampliar.</p>
 
             <div id="grid-resultados" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                
                 <div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
                     <img src="https://placehold.co/600x800/1e293b/94a3b8?text=Foto+1" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
                 </div>
@@ -307,7 +306,6 @@
             </h2>
             
             <div id="grid-videos" class="grid md:grid-cols-2 gap-10">
-                
                 <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
@@ -345,7 +343,6 @@
                 <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video item-oculto w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-
             </div>
 
             <div class="text-center mt-12">
@@ -362,11 +359,11 @@
                 Logística y <span class="text-amber-600">Transparencia Total</span>
             </h2>
             
-            <div class="max-w-5xl mx-auto bg-blue-50 border border-blue-200 rounded-3xl p-6 md:p-8 mb-10 shadow-sm relative overflow-hidden">
+            <div class="max-w-5xl mx-auto bg-blue-50 border border-blue-200 rounded-3xl p-6 md:p-8 mb-10 shadow-sm relative">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full opacity-50 pointer-events-none"></div>
                 
-                <h3 class="text-xl md:text-2xl font-black text-slate-900 mb-6 text-center break-words"><i class="fa-solid fa-shield-halved text-blue-600 mr-2"></i> Protocolo de Seguridad</h3>
-                <p class="text-center text-slate-600 font-medium mb-8 max-w-3xl mx-auto px-2">Para garantizar la protección de tus datos y evitar fraudes bancarios, nuestro sistema requiere dos pasos clave:</p>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 mb-6 text-center break-words relative z-10"><i class="fa-solid fa-shield-halved text-blue-600 mr-2"></i> Protocolo de Seguridad</h3>
+                <p class="text-center text-slate-600 font-medium mb-8 max-w-3xl mx-auto px-2 relative z-10">Para garantizar la protección de tus datos y evitar fraudes bancarios, nuestro sistema requiere dos pasos clave:</p>
                 
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 relative z-10 w-full">
                     <div class="bg-white p-5 md:p-6 rounded-2xl border border-blue-100 shadow-sm w-full">
@@ -417,7 +414,6 @@
             </p>
             
             <div id="grid-entregas" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                
                 <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
                     <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+1" class="w-full h-auto rounded-xl aspect-square object-cover">
                 </div>
@@ -466,13 +462,13 @@
     </section>
 
     <section id="diagnostico" class="py-24 px-5 bg-gradient-to-b from-blue-50 to-white w-full">
-        <div class="max-w-3xl mx-auto bg-white rounded-3xl p-6 md:p-14 shadow-2xl border border-blue-100 relative w-full overflow-hidden">
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl p-6 md:p-14 shadow-2xl border border-blue-100 relative w-full mt-12 md:mt-0">
             
-            <div class="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-xl border-4 border-white">
+            <div class="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-xl border-4 border-white z-10">
                 <i class="fa-solid fa-clipboard-user text-4xl"></i>
             </div>
             
-            <h2 class="text-3xl md:text-5xl font-black text-slate-900 text-center mb-6 mt-8 md:mt-6 leading-tight tracking-tight break-words">Tu Evaluación Gratis</h2>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 text-center mb-6 mt-10 md:mt-6 leading-tight tracking-tight break-words">Tu Evaluación Gratis</h2>
             <p class="text-lg md:text-xl text-slate-600 text-center mb-12 font-semibold">Ingresa tus datos para calcular tu IMC y enviarte el protocolo ideal directamente a tu WhatsApp.</p>
 
             <div class="space-y-6 md:space-y-8 w-full">
@@ -523,7 +519,7 @@
         </div>
     </section>
 
-    <footer class="bg-slate-950 pt-16 pb-12 text-center px-5 border-t-4 border-slate-800 w-full overflow-hidden">
+    <footer class="bg-slate-950 pt-16 pb-12 text-center px-5 border-t-4 border-slate-800 w-full">
         <div class="max-w-6xl mx-auto">
             
             <div class="flex flex-col md:flex-row justify-center items-center gap-3 mb-8">
@@ -623,7 +619,6 @@
 
 Por favor, ayúdenme a diagnosticar mi protocolo ideal.`;
 
-            // Número configurado (Ibagué, Tolima, Colombia)
             const telefono = '573232356463'; 
             const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank');
