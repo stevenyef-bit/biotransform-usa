@@ -355,9 +355,45 @@
 
     <section class="py-20 px-5 bg-white border-b-4 border-slate-200">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-black text-center text-slate-900 mb-10 tracking-tight">
-                Logística y <span class="text-amber-600">Transparencia</span>
+            <h2 class="text-4xl font-black text-center text-slate-900 mb-8 tracking-tight">
+                Logística y <span class="text-amber-600">Transparencia Total</span>
             </h2>
+            
+            <div class="max-w-5xl mx-auto bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-12 mb-16 shadow-sm">
+                <p class="text-center text-xl text-slate-700 mb-10 font-bold">
+                    Tu tranquilidad es nuestra prioridad. Nuestro proceso de distribución es 100% transparente y monitoreado paso a paso:
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="text-center">
+                        <div class="w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-5 text-blue-600 text-3xl shadow-inner">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <h4 class="font-black text-slate-900 text-xl mb-3">1. Facturación Oficial</h4>
+                        <p class="text-base text-slate-600 font-medium leading-relaxed">Al procesar tu orden segura, recibirás de inmediato tu comprobante y recibo de factura oficial emitido por la compañía.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-5 text-amber-600 text-3xl shadow-inner">
+                            <i class="fa-solid fa-barcode"></i>
+                        </div>
+                        <h4 class="font-black text-slate-900 text-xl mb-3">2. Guía de Rastreo</h4>
+                        <p class="text-base text-slate-600 font-medium leading-relaxed">En un plazo de <strong class="text-amber-700 font-extrabold">3 días hábiles</strong>, el laboratorio genera y emite tu número de rastreo oficial de UPS.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-5 text-green-600 text-3xl shadow-inner">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h4 class="font-black text-slate-900 text-xl mb-3">3. Monitoreo 1-a-1</h4>
+                        <p class="text-base text-slate-600 font-medium leading-relaxed">Podrás visualizar tu guía en la plataforma oficial, y además tu asesor te la enviará directamente a tu WhatsApp para acompañarte hasta la entrega.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-xl text-slate-500 mb-10 font-semibold max-w-2xl mx-auto">
+                Tus protocolos viajan asegurados. Aquí tienes evidencia real de nuestros clientes recibiendo sus paquetes en todo Estados Unidos y Canadá.
+            </p>
             
             <div id="grid-entregas" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 
@@ -398,12 +434,11 @@
                 <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega item-oculto" onclick="openLightbox(this)">
                     <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+12" class="w-full h-auto rounded-xl aspect-square object-cover">
                 </div>
-
             </div>
 
-            <div class="text-center mt-10">
-                <button id="btn-more-entregas" onclick="cargarMas('grid-entregas', 'item-entrega', 'btn-more-entregas', 10)" class="bg-amber-100 text-amber-800 font-bold px-10 py-4 rounded-xl hover:bg-amber-200 transition-colors text-lg border border-amber-200">
-                    <i class="fa-solid fa-box-open mr-2"></i> Ver Más Cajas Entregadas
+            <div class="text-center mt-12">
+                <button id="btn-more-entregas" onclick="cargarMas('grid-entregas', 'item-entrega', 'btn-more-entregas', 10)" class="bg-amber-100 text-amber-800 font-bold px-10 py-5 rounded-2xl hover:bg-amber-200 transition-colors text-lg border border-amber-200 shadow-sm">
+                    <i class="fa-solid fa-box-open mr-3"></i> Cargar Más Entregas Reales
                 </button>
             </div>
         </div>
@@ -467,7 +502,7 @@
         </div>
     </section>
 
-<footer class="bg-slate-950 pt-16 pb-12 text-center px-5 border-t-4 border-slate-800">
+    <footer class="bg-slate-950 pt-16 pb-12 text-center px-5 border-t-4 border-slate-800">
         <div class="max-w-6xl mx-auto">
             
             <div class="flex justify-center items-center space-x-3 mb-8">
@@ -513,15 +548,12 @@
         // Lógica de "Ver Más" para todas las secciones
         function cargarMas(contenedorId, claseItem, btnId, cantidadAMostrar) {
             const contenedor = document.getElementById(contenedorId);
-            // Buscar solo los ítems que estén ocultos dentro de este contenedor
             const itemsOcultos = contenedor.querySelectorAll('.' + claseItem + '.item-oculto');
             
-            // Mostrar los siguientes (ej. 10)
             for (let i = 0; i < cantidadAMostrar && i < itemsOcultos.length; i++) {
                 itemsOcultos[i].classList.remove('item-oculto');
             }
             
-            // Si ya no quedan elementos ocultos, esconder el botón
             const restantes = contenedor.querySelectorAll('.' + claseItem + '.item-oculto');
             if (restantes.length === 0) {
                 document.getElementById(btnId).style.display = 'none';
@@ -574,7 +606,7 @@
 Por favor, ayúdenme a diagnosticar mi protocolo ideal.`;
 
             // ⚠️ REEMPLAZA EL NÚMERO DE ABAJO CON TU NÚMERO DE USA
-            const telefono = '15551234567'; 
+            const telefono = '+573232356463'; 
             const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank');
         }
@@ -587,5 +619,4 @@ Por favor, ayúdenme a diagnosticar mi protocolo ideal.`;
         });
     </script>
 </body>
-
 </html>
