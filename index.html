@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; -webkit-tap-highlight-color: transparent; }
-        html { font-size: 18px; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; -webkit-tap-highlight-color: transparent; overflow-x: hidden; }
+        html { font-size: 18px; overflow-x: hidden; }
 
         /* Botones Masivos */
         .btn-massive {
@@ -50,6 +50,7 @@
         input, select {
             font-size: 1.15rem !important; padding: 1.2rem 1.5rem !important;
             border-width: 2px !important; border-color: #e2e8f0 !important; color: #0f172a !important; border-radius: 1rem !important;
+            width: 100%; max-width: 100%;
         }
         input:focus, select:focus { border-color: #2563eb !important; background-color: #ffffff !important; box-shadow: 0 0 15px rgba(37, 99, 235, 0.1); outline: none; }
         label { font-size: 1.15rem; font-weight: 800; color: #1e293b; }
@@ -63,14 +64,14 @@
         .btn-whatsapp-pulse { animation: pulse-green 2s infinite; }
     </style>
 </head>
-<body>
+<body class="antialiased w-full overflow-x-hidden">
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
         <img id="lightbox-img" src="" alt="Ampliación" onclick="event.stopPropagation()">
     </div>
 
-    <nav class="bg-white border-b-2 border-slate-100 sticky top-0 z-50 shadow-sm">
+    <nav class="bg-white border-b-2 border-slate-100 sticky top-0 z-50 shadow-sm w-full">
         <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-md">
@@ -78,52 +79,54 @@
                 </div>
                 <span class="text-2xl font-black text-slate-900 tracking-tight">Bio<span class="text-blue-600">Transform</span></span>
             </div>
-            <a href="#diagnostico" class="bg-blue-600 text-white font-extrabold px-6 py-3 rounded-xl text-lg hover:bg-blue-700 shadow-md transition-colors">
+            <a href="#diagnostico" class="bg-blue-600 text-white font-extrabold px-6 py-3 rounded-xl text-lg hover:bg-blue-700 shadow-md transition-colors whitespace-nowrap">
                 Evaluación
             </a>
         </div>
     </nav>
 
-    <section class="bg-gradient-to-b from-blue-50 to-white pt-12 pb-20 px-5 border-b border-slate-100">
+    <section class="bg-gradient-to-b from-blue-50 to-white pt-12 pb-20 px-5 border-b border-slate-100 w-full">
         <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-flex items-center bg-green-100 text-green-900 font-extrabold px-5 py-2 rounded-full text-base mb-8 border border-green-200 shadow-sm">
+            <span class="inline-flex items-center bg-green-100 text-green-900 font-extrabold px-5 py-2 rounded-full text-sm md:text-base mb-8 border border-green-200 shadow-sm">
                 <i class="fa-solid fa-certificate mr-2 text-xl text-green-600"></i> Asesoría Premium para USA & Canadá
             </span>
-            <h1 class="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight tracking-tight">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight tracking-tight break-words">
                 Recupera tu Vitalidad. <span class="text-blue-600 block md:inline">Reactiva tu Metabolismo.</span>
             </h1>
             <p class="text-xl md:text-2xl text-slate-600 mb-12 font-semibold leading-relaxed px-2">
                 Programas naturales de liofilización avanzada para desinflamar, equilibrar hormonas y optimizar tu energía. Acompañamiento personalizado 1-a-1.
             </p>
-            <a href="#diagnostico" class="btn-massive bg-blue-600 text-white font-black text-2xl px-12 w-full md:w-max mx-auto shadow-2xl shadow-blue-200 btn-whatsapp-pulse">
+            <a href="#diagnostico" class="btn-massive bg-blue-600 text-white font-black text-xl md:text-2xl px-8 md:px-12 w-full md:w-fit mx-auto shadow-2xl shadow-blue-200 btn-whatsapp-pulse">
                 <i class="fa-solid fa-user-doctor mr-3 text-3xl"></i> Configurar mi Protocolo
             </a>
         </div>
     </section>
 
-    <section class="py-20 px-5 bg-white">
+    <section class="py-20 px-5 bg-white w-full">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-black text-center text-slate-900 mb-16 border-b-4 border-blue-600 inline-block pb-3 mx-auto flex justify-center w-max tracking-tight">
-                Fichas Clínicas de Bio-Transformación
-            </h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight inline-block border-b-4 border-blue-600 pb-3 break-words max-w-full">
+                    Fichas Clínicas de Bio-Transformación
+                </h2>
+            </div>
 
             <div class="space-y-12 mb-16">
                 
-                <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm">
+                <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm overflow-hidden">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-green-100 rounded-full flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-leaf text-5xl md:text-7xl text-green-600"></i>
                         </div>
-                        <div class="flex-1">
+                        <div class="flex-1 w-full">
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-slate-200 text-slate-700 font-bold px-4 py-1.5 rounded-full text-xs uppercase">Hombres y Mujeres</span>
                                 <span class="bg-green-100 text-green-800 font-black px-4 py-1.5 rounded-full text-xs uppercase"><i class="fa-solid fa-box mr-1"></i> $79 USD Aprox.</span>
                             </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-3">Protocolo Noni GIA: Reset y Desinflamación</h3>
+                            <h3 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-words">Protocolo Noni GIA: Reset y Desinflamación</h3>
                             <p class="text-lg text-slate-600 font-medium mb-4">Un potente antioxidante que apoya tu sistema inmunológico. Limpia profundamente el tracto digestivo y elimina toxinas.</p>
                             <p class="text-xs text-slate-500 font-bold mb-6 italic">* El valor final con envío incluido puede variar entre $4 a $6 USD extra dependiendo de la ciudad y estado de destino.</p>
                             
-                            <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-slate-200">
+                            <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-slate-200 w-full">
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2"><i class="fa-solid fa-check text-green-500 mr-2"></i> Beneficios Principales</h4>
                                     <ul class="text-base text-slate-600 space-y-2 font-medium">
@@ -141,22 +144,22 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm relative">
+                <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm relative overflow-hidden">
                     <div class="absolute -top-4 right-5 md:right-10 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-black px-6 py-2 rounded-full text-sm shadow-lg transform rotate-2">MÁS POPULAR</div>
-                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="flex flex-col md:flex-row gap-8 items-start mt-6 md:mt-0">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-bolt text-5xl md:text-7xl text-blue-600"></i>
                         </div>
-                        <div class="flex-1">
+                        <div class="flex-1 w-full">
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-slate-200 text-slate-700 font-bold px-4 py-1.5 rounded-full text-xs uppercase">Hombres y Mujeres</span>
                                 <span class="bg-blue-100 text-blue-800 font-black px-4 py-1.5 rounded-full text-xs uppercase"><i class="fa-solid fa-box mr-1"></i> $79 USD Aprox.</span>
                             </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-3">Protocolo Blue: Energía y Combustible</h3>
+                            <h3 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-words">Protocolo Blue: Energía y Combustible</h3>
                             <p class="text-lg text-slate-600 font-medium mb-4">Convierte la grasa acumulada en energía pura. Aumenta tu rendimiento celular, potencia el enfoque mental y elimina los antojos.</p>
                             <p class="text-xs text-slate-500 font-bold mb-6 italic">* El valor final con envío incluido puede variar entre $4 a $6 USD extra dependiendo de la ciudad y estado de destino.</p>
                             
-                            <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-slate-200">
+                            <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-slate-200 w-full">
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2"><i class="fa-solid fa-check text-blue-500 mr-2"></i> Beneficios Principales</h4>
                                     <ul class="text-base text-slate-600 space-y-2 font-medium">
@@ -174,21 +177,21 @@
                     </div>
                 </div>
 
-                <div class="bg-pink-50/50 border-2 border-pink-200 rounded-3xl p-6 md:p-10 shadow-sm">
+                <div class="bg-pink-50/50 border-2 border-pink-200 rounded-3xl p-6 md:p-10 shadow-sm overflow-hidden">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-pink-100 rounded-full flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-spa text-5xl md:text-7xl text-pink-500"></i>
                         </div>
-                        <div class="flex-1">
+                        <div class="flex-1 w-full">
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-pink-600 text-white font-black px-4 py-1.5 rounded-full text-xs uppercase">Exclusivo Mujeres</span>
                                 <span class="bg-pink-200 text-pink-800 font-black px-4 py-1.5 rounded-full text-xs uppercase"><i class="fa-solid fa-box mr-1"></i> $79 USD Aprox.</span>
                             </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-3">Protocolo Pink: Balance Femenino</h3>
+                            <h3 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-words">Protocolo Pink: Balance Femenino</h3>
                             <p class="text-lg text-slate-600 font-medium mb-4">Aborda las necesidades hormonales de la mujer de hoy. Desintoxica, protege contra infecciones y estabiliza desórdenes internos y hormonales.</p>
                             <p class="text-xs text-slate-500 font-bold mb-6 italic">* El valor final con envío incluido puede variar entre $4 a $6 USD extra dependiendo de la ciudad y estado de destino.</p>
                             
-                            <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-pink-200">
+                            <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-pink-200 w-full">
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2"><i class="fa-solid fa-check text-pink-500 mr-2"></i> Beneficios Principales</h4>
                                     <ul class="text-base text-slate-600 space-y-2 font-medium">
@@ -207,21 +210,21 @@
                     </div>
                 </div>
 
-                <div class="bg-red-50/40 border-2 border-red-200 rounded-3xl p-6 md:p-10 shadow-sm">
+                <div class="bg-red-50/40 border-2 border-red-200 rounded-3xl p-6 md:p-10 shadow-sm overflow-hidden">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-red-100 rounded-full flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-fire text-5xl md:text-7xl text-red-600"></i>
                         </div>
-                        <div class="flex-1">
+                        <div class="flex-1 w-full">
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-red-600 text-white font-black px-4 py-1.5 rounded-full text-xs uppercase">Exclusivo Hombres</span>
                                 <span class="bg-red-200 text-red-800 font-black px-4 py-1.5 rounded-full text-xs uppercase"><i class="fa-solid fa-box mr-1"></i> $79 USD Aprox.</span>
                             </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-3">Protocolo Red: Vitalidad Masculina</h3>
+                            <h3 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-words">Protocolo Red: Vitalidad Masculina</h3>
                             <p class="text-lg text-slate-600 font-medium mb-4">Diseñado para las necesidades metabólicas del hombre. Afecta positivamente los niveles hormonales para promover la virilidad y fuerza.</p>
                             <p class="text-xs text-slate-500 font-bold mb-6 italic">* El valor final con envío incluido puede variar entre $4 a $6 USD extra dependiendo de la ciudad y estado de destino.</p>
                             
-                            <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-red-200">
+                            <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-red-200 w-full">
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2"><i class="fa-solid fa-check text-red-500 mr-2"></i> Beneficios Principales</h4>
                                     <ul class="text-base text-slate-600 space-y-2 font-medium">
@@ -243,10 +246,10 @@
         </div>
     </section>
 
-    <section class="py-20 px-5 bg-slate-900 text-white">
+    <section class="py-20 px-5 bg-slate-900 text-white w-full">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-black text-center mb-6">Evidencia <span class="text-blue-400">Real</span></h2>
-            <p class="text-center text-xl text-slate-400 mb-12 font-semibold">Clic en la foto para ampliar.</p>
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-6 break-words">Evidencia <span class="text-blue-400">Real</span></h2>
+            <p class="text-center text-xl text-slate-400 mb-12 font-semibold px-2">Clic en la foto para ampliar.</p>
 
             <div id="grid-resultados" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 
@@ -290,127 +293,127 @@
             </div>
 
             <div class="text-center mt-10">
-                <button id="btn-more-resultados" onclick="cargarMas('grid-resultados', 'item-resultado', 'btn-more-resultados', 10)" class="bg-slate-800 text-white border border-slate-600 font-bold px-10 py-4 rounded-xl hover:bg-slate-700 transition-colors text-lg">
+                <button id="btn-more-resultados" onclick="cargarMas('grid-resultados', 'item-resultado', 'btn-more-resultados', 10)" class="bg-slate-800 text-white border border-slate-600 font-bold px-10 py-4 rounded-xl hover:bg-slate-700 transition-colors text-lg w-full md:w-auto">
                     <i class="fa-solid fa-plus mr-2"></i> Ver Más Resultados
                 </button>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-5 bg-slate-50 border-b-2 border-slate-200">
+    <section class="py-20 px-5 bg-slate-50 border-b-2 border-slate-200 w-full">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-black text-center text-slate-900 mb-10 tracking-tight">
+            <h2 class="text-4xl font-black text-center text-slate-900 mb-10 tracking-tight break-words">
                 Voces de <span class="text-blue-600">Transformación</span>
             </h2>
             
             <div id="grid-videos" class="grid md:grid-cols-2 gap-10">
                 
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
 
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video item-oculto">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video item-oculto w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video item-oculto">
+                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video item-oculto w-full">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
                 </div>
 
             </div>
 
             <div class="text-center mt-12">
-                <button id="btn-more-videos" onclick="cargarMas('grid-videos', 'item-video', 'btn-more-videos', 10)" class="bg-blue-100 text-blue-700 font-bold px-10 py-4 rounded-xl hover:bg-blue-200 transition-colors text-lg border border-blue-200">
+                <button id="btn-more-videos" onclick="cargarMas('grid-videos', 'item-video', 'btn-more-videos', 10)" class="bg-blue-100 text-blue-700 font-bold px-10 py-4 rounded-xl hover:bg-blue-200 transition-colors text-lg border border-blue-200 w-full md:w-auto">
                     <i class="fa-brands fa-youtube mr-2"></i> Cargar Más Videos
                 </button>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-5 bg-white border-b-4 border-slate-200">
+    <section class="py-20 px-5 bg-white border-b-4 border-slate-200 w-full">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-black text-center text-slate-900 mb-8 tracking-tight">
+            <h2 class="text-3xl md:text-4xl font-black text-center text-slate-900 mb-8 tracking-tight break-words">
                 Logística y <span class="text-amber-600">Transparencia Total</span>
             </h2>
             
-            <div class="max-w-5xl mx-auto bg-blue-50 border border-blue-200 rounded-3xl p-8 mb-10 shadow-sm relative overflow-hidden">
+            <div class="max-w-5xl mx-auto bg-blue-50 border border-blue-200 rounded-3xl p-6 md:p-8 mb-10 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full opacity-50 pointer-events-none"></div>
                 
-                <h3 class="text-2xl font-black text-slate-900 mb-6 text-center"><i class="fa-solid fa-shield-halved text-blue-600 mr-2"></i> Protocolo de Seguridad para tu Orden</h3>
-                <p class="text-center text-slate-600 font-medium mb-8 max-w-3xl mx-auto">Para garantizar la protección de tus datos y evitar fraudes bancarios, nuestro sistema Concierge requiere dos puntos clave para que tu orden sea exitosa:</p>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 mb-6 text-center break-words"><i class="fa-solid fa-shield-halved text-blue-600 mr-2"></i> Protocolo de Seguridad</h3>
+                <p class="text-center text-slate-600 font-medium mb-8 max-w-3xl mx-auto px-2">Para garantizar la protección de tus datos y evitar fraudes bancarios, nuestro sistema requiere dos pasos clave:</p>
                 
-                <div class="grid md:grid-cols-2 gap-8 relative z-10">
-                    <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm">
+                <div class="grid md:grid-cols-2 gap-6 md:gap-8 relative z-10 w-full">
+                    <div class="bg-white p-5 md:p-6 rounded-2xl border border-blue-100 shadow-sm w-full">
                         <h4 class="font-black text-slate-900 mb-3 text-lg"><i class="fa-solid fa-message text-blue-500 mr-2"></i> 1. Verificación Temporal (SMS)</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">Al iniciar tu orden, el sistema te enviará un código de seguridad por mensaje de texto. Es vital <strong>enviarlo a tu asesora inmediatamente</strong>, ya que expira en minutos. Sin este código de validación, no podremos generar tu enlace de pago seguro.</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Al iniciar tu orden, el sistema te enviará un código de seguridad por mensaje de texto. Es vital <strong>enviarlo a tu asesora inmediatamente</strong>, ya que expira. Sin este código, no podremos generar tu enlace de pago seguro.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm">
+                    <div class="bg-white p-5 md:p-6 rounded-2xl border border-blue-100 shadow-sm w-full">
                         <h4 class="font-black text-slate-900 mb-3 text-lg"><i class="fa-solid fa-credit-card text-blue-500 mr-2"></i> 2. Facturación vs. Envío</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">Para que tu banco apruebe la transacción, tu <strong>Dirección de Facturación</strong> debe ser exactamente la que tienes registrada en tu tarjeta. Tu <strong>Dirección de Envío</strong> puede ser diferente (si te mudaste o es a otra ubicación).</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Para que el banco apruebe la transacción, tu <strong>Dirección de Facturación</strong> debe ser exactamente la que tienes registrada en tu tarjeta. Tu <strong>Dirección de Envío</strong> puede ser diferente.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="max-w-5xl mx-auto bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-12 mb-16 shadow-sm">
-                <p class="text-center text-xl text-slate-700 mb-10 font-bold">
-                    Tu tranquilidad es nuestra prioridad. Nuestro proceso de distribución es 100% transparente y monitoreado paso a paso:
+            <div class="max-w-5xl mx-auto bg-slate-50 border border-slate-200 rounded-3xl p-6 md:p-12 mb-16 shadow-sm w-full">
+                <p class="text-center text-lg md:text-xl text-slate-700 mb-10 font-bold px-2">
+                    Nuestro proceso de distribución es 100% transparente y monitoreado paso a paso:
                 </p>
                 
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div class="text-center">
-                        <div class="w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-5 text-blue-600 text-3xl shadow-inner">
+                <div class="grid md:grid-cols-3 gap-10 w-full">
+                    <div class="text-center w-full">
+                        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-5 text-blue-600 text-2xl md:text-3xl shadow-inner">
                             <i class="fa-solid fa-file-invoice-dollar"></i>
                         </div>
-                        <h4 class="font-black text-slate-900 text-xl mb-3">1. Facturación Oficial</h4>
-                        <p class="text-base text-slate-600 font-medium leading-relaxed">Al procesar tu orden segura, recibirás de inmediato tu comprobante y recibo de factura oficial emitido por la compañía.</p>
+                        <h4 class="font-black text-slate-900 text-lg md:text-xl mb-3">1. Facturación Oficial</h4>
+                        <p class="text-sm md:text-base text-slate-600 font-medium leading-relaxed">Al procesar tu orden segura, recibirás de inmediato tu comprobante y recibo de factura emitido por la compañía.</p>
                     </div>
                     
-                    <div class="text-center">
-                        <div class="w-20 h-20 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-5 text-amber-600 text-3xl shadow-inner">
+                    <div class="text-center w-full">
+                        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-5 text-amber-600 text-2xl md:text-3xl shadow-inner">
                             <i class="fa-solid fa-barcode"></i>
                         </div>
-                        <h4 class="font-black text-slate-900 text-xl mb-3">2. Guía de Rastreo</h4>
-                        <p class="text-base text-slate-600 font-medium leading-relaxed">En un plazo de <strong class="text-amber-700 font-extrabold">3 días hábiles</strong>, el laboratorio genera y emite tu número de rastreo oficial de UPS.</p>
+                        <h4 class="font-black text-slate-900 text-lg md:text-xl mb-3">2. Guía de Rastreo</h4>
+                        <p class="text-sm md:text-base text-slate-600 font-medium leading-relaxed">En un plazo de <strong class="text-amber-700 font-extrabold">3 días hábiles</strong>, el laboratorio genera y emite tu número de rastreo oficial de UPS.</p>
                     </div>
                     
-                    <div class="text-center">
-                        <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-5 text-green-600 text-3xl shadow-inner">
+                    <div class="text-center w-full">
+                        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-5 text-green-600 text-2xl md:text-3xl shadow-inner">
                             <i class="fa-brands fa-whatsapp"></i>
                         </div>
-                        <h4 class="font-black text-slate-900 text-xl mb-3">3. Monitoreo 1-a-1</h4>
-                        <p class="text-base text-slate-600 font-medium leading-relaxed">Podrás visualizar tu guía en la plataforma oficial, y además tu asesora te la enviará a tu WhatsApp para acompañarte hasta la entrega.</p>
+                        <h4 class="font-black text-slate-900 text-lg md:text-xl mb-3">3. Monitoreo 1-a-1</h4>
+                        <p class="text-sm md:text-base text-slate-600 font-medium leading-relaxed">Podrás visualizar tu guía oficial, y tu asesora te la enviará a tu WhatsApp para acompañarte hasta la entrega.</p>
                     </div>
                 </div>
             </div>
 
-            <p class="text-center text-xl text-slate-500 mb-10 font-semibold max-w-2xl mx-auto">
-                Tus protocolos viajan asegurados. Aquí tienes evidencia real de nuestros clientes recibiendo sus paquetes en todo Estados Unidos y Canadá.
+            <p class="text-center text-lg md:text-xl text-slate-500 mb-10 font-semibold max-w-2xl mx-auto px-2">
+                Aquí tienes evidencia real de nuestros clientes recibiendo sus paquetes en Estados Unidos y Canadá.
             </p>
             
             <div id="grid-entregas" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -455,57 +458,57 @@
             </div>
 
             <div class="text-center mt-12">
-                <button id="btn-more-entregas" onclick="cargarMas('grid-entregas', 'item-entrega', 'btn-more-entregas', 10)" class="bg-amber-100 text-amber-800 font-bold px-10 py-5 rounded-2xl hover:bg-amber-200 transition-colors text-lg border border-amber-200 shadow-sm">
+                <button id="btn-more-entregas" onclick="cargarMas('grid-entregas', 'item-entrega', 'btn-more-entregas', 10)" class="bg-amber-100 text-amber-800 font-bold px-10 py-5 rounded-2xl hover:bg-amber-200 transition-colors text-lg border border-amber-200 shadow-sm w-full md:w-auto">
                     <i class="fa-solid fa-box-open mr-3"></i> Cargar Más Entregas Reales
                 </button>
             </div>
         </div>
     </section>
 
-    <section id="diagnostico" class="py-24 px-5 bg-gradient-to-b from-blue-50 to-white">
-        <div class="max-w-3xl mx-auto bg-white rounded-3xl p-8 md:p-14 shadow-2xl border border-blue-100 relative">
+    <section id="diagnostico" class="py-24 px-5 bg-gradient-to-b from-blue-50 to-white w-full">
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl p-6 md:p-14 shadow-2xl border border-blue-100 relative w-full overflow-hidden">
             
             <div class="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-xl border-4 border-white">
                 <i class="fa-solid fa-clipboard-user text-4xl"></i>
             </div>
             
-            <h2 class="text-4xl md:text-5xl font-black text-slate-900 text-center mb-6 mt-6 leading-tight tracking-tight">Tu Evaluación Gratis</h2>
-            <p class="text-xl text-slate-600 text-center mb-12 font-semibold">Ingresa tus datos para calcular tu IMC y enviarte el protocolo ideal directamente a tu WhatsApp.</p>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 text-center mb-6 mt-8 md:mt-6 leading-tight tracking-tight break-words">Tu Evaluación Gratis</h2>
+            <p class="text-lg md:text-xl text-slate-600 text-center mb-12 font-semibold">Ingresa tus datos para calcular tu IMC y enviarte el protocolo ideal directamente a tu WhatsApp.</p>
 
-            <div class="space-y-8">
-                <div>
+            <div class="space-y-6 md:space-y-8 w-full">
+                <div class="w-full">
                     <label class="mb-3 block"><i class="fa-solid fa-user mr-2 text-blue-500"></i> Tu Nombre</label>
-                    <input type="text" id="nombre" placeholder="Ej: María L." class="w-full bg-slate-50">
+                    <input type="text" id="nombre" placeholder="Ej: María L." class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3">
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
+                    <div class="w-full">
                         <label class="mb-3 block"><i class="fa-solid fa-calendar mr-2 text-blue-500"></i> Edad</label>
-                        <input type="number" id="edad" placeholder="Ej: 45" class="w-full bg-slate-50">
+                        <input type="number" id="edad" placeholder="Ej: 45" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3">
                     </div>
-                    <div>
+                    <div class="w-full">
                         <label class="mb-3 block"><i class="fa-solid fa-venus-mars mr-2 text-blue-500"></i> Sexo</label>
-                        <select id="sexo" class="w-full bg-slate-50 appearance-none cursor-pointer">
+                        <select id="sexo" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 appearance-none cursor-pointer">
                             <option value="Mujer">Mujer</option>
                             <option value="Hombre">Hombre</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
+                    <div class="w-full">
                         <label class="mb-3 block"><i class="fa-solid fa-weight-scale mr-2 text-blue-500"></i> Peso (Libras)</label>
-                        <input type="number" id="peso" placeholder="Ej: 165" class="w-full bg-slate-50">
+                        <input type="number" id="peso" placeholder="Ej: 165" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3">
                     </div>
-                    <div>
+                    <div class="w-full">
                         <label class="mb-3 block"><i class="fa-solid fa-ruler-vertical mr-2 text-blue-500"></i> Estatura</label>
-                        <input type="text" id="estatura" placeholder="Ej: 5'5" class="w-full bg-slate-50">
+                        <input type="text" id="estatura" placeholder="Ej: 5'5" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3">
                     </div>
                 </div>
 
-                <div>
+                <div class="w-full">
                     <label class="mb-3 block"><i class="fa-solid fa-bullseye mr-2 text-blue-500"></i> ¿Cuál es tu objetivo principal?</label>
-                    <select id="objetivo" class="w-full bg-slate-50 appearance-none cursor-pointer">
+                    <select id="objetivo" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 appearance-none cursor-pointer">
                         <option value="Desinflamar abdomen">🍃 Desinflamar abdomen</option>
                         <option value="Quistes y Hormonas">🌸 Quistes y Balance Hormonal</option>
                         <option value="Energía y Enfoque">⚡ Energía, Enfoque y Quema Grasa</option>
@@ -513,48 +516,48 @@
                     </select>
                 </div>
 
-                <button onclick="enviarWhatsApp()" class="btn-massive btn-whatsapp-pulse bg-green-500 hover:bg-green-600 text-white font-black text-2xl md:text-3xl w-full mt-12 flex flex-col items-center shadow-lg border-none">
-                    <div class="flex items-center"><i class="fa-brands fa-whatsapp text-4xl mr-4"></i> Enviar mis datos</div>
+                <button onclick="enviarWhatsApp()" class="btn-massive btn-whatsapp-pulse bg-green-500 hover:bg-green-600 text-white font-black text-xl md:text-3xl w-full mt-12 flex flex-col items-center shadow-lg border-none px-4">
+                    <div class="flex items-center text-center"><i class="fa-brands fa-whatsapp text-3xl md:text-4xl mr-3"></i> Enviar mis datos</div>
                 </button>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-950 pt-16 pb-12 text-center px-5 border-t-4 border-slate-800">
+    <footer class="bg-slate-950 pt-16 pb-12 text-center px-5 border-t-4 border-slate-800 w-full overflow-hidden">
         <div class="max-w-6xl mx-auto">
             
-            <div class="flex justify-center items-center space-x-3 mb-8">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-3 mb-8">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg">
                     <i class="fa-solid fa-dna text-white"></i>
                 </div>
-                <span class="text-2xl font-black text-white tracking-tight">Bio<span class="text-blue-400">Transform</span> <span class="text-slate-500 font-light text-base">Concierge</span></span>
+                <span class="text-2xl font-black text-white tracking-tight text-center">Bio<span class="text-blue-400">Transform</span> <span class="text-slate-500 font-light text-base block md:inline">Concierge</span></span>
             </div>
 
-            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 mb-10 max-w-2xl mx-auto shadow-inner">
-                <p class="text-slate-400 text-sm font-bold uppercase tracking-widest mb-6">Logística y Distribución Certificada para Norteamérica</p>
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 mb-10 max-w-2xl mx-auto shadow-inner w-full">
+                <p class="text-slate-400 text-xs md:text-sm font-bold uppercase tracking-widest mb-6 break-words">Logística y Distribución Certificada</p>
                 
-                <div class="flex justify-center items-center gap-10 md:gap-16">
+                <div class="flex justify-center items-center gap-8 md:gap-16">
                     <div class="flex flex-col items-center group">
-                        <i class="fa-brands fa-ups text-6xl text-slate-600 group-hover:text-amber-600 transition-colors duration-300"></i>
-                        <span class="text-xs text-slate-600 mt-2 font-bold group-hover:text-amber-500">Servicio Priority</span>
+                        <i class="fa-brands fa-ups text-5xl md:text-6xl text-slate-600 group-hover:text-amber-600 transition-colors duration-300"></i>
+                        <span class="text-xs text-slate-600 mt-2 font-bold group-hover:text-amber-500">Priority</span>
                     </div>
                     
                     <div class="flex flex-col items-center group">
-                        <i class="fa-brands fa-dhl text-6xl text-slate-600 group-hover:text-yellow-400 transition-colors duration-300"></i>
-                        <span class="text-xs text-slate-600 mt-2 font-bold group-hover:text-yellow-300">Envío Express</span>
+                        <i class="fa-brands fa-dhl text-5xl md:text-6xl text-slate-600 group-hover:text-yellow-400 transition-colors duration-300"></i>
+                        <span class="text-xs text-slate-600 mt-2 font-bold group-hover:text-yellow-300">Express</span>
                     </div>
                 </div>
                 
-                <p class="text-slate-500 text-sm mt-6 font-medium max-w-md mx-auto leading-relaxed">
-                    Todas las órdenes son procesadas, selladas y enviadas con número de rastreo oficial desde nuestros centros de distribución autorizados.
+                <p class="text-slate-500 text-xs md:text-sm mt-6 font-medium max-w-md mx-auto leading-relaxed">
+                    Todas las órdenes son procesadas, selladas y enviadas con número de rastreo oficial desde nuestros centros de distribución.
                 </p>
             </div>
 
             <div class="border-t border-slate-800 pt-8 max-w-6xl mx-auto">
-                <p class="text-slate-600 text-sm font-medium">
+                <p class="text-slate-600 text-xs md:text-sm font-medium px-2 break-words">
                     &copy; 2026 BioTransform Concierge Services. Todos los derechos reservados.
                 </p>
-                <p class="text-slate-700 text-xs mt-2 font-mono uppercase tracking-widest">
+                <p class="text-slate-700 text-[10px] md:text-xs mt-3 font-mono uppercase tracking-widest break-words px-2">
                     Formulación Liofilizada Premium · Grado Clínico
                 </p>
             </div>
@@ -563,7 +566,6 @@
     </footer>
 
     <script>
-        // Lógica de "Ver Más" para todas las secciones
         function cargarMas(contenedorId, claseItem, btnId, cantidadAMostrar) {
             const contenedor = document.getElementById(contenedorId);
             const itemsOcultos = contenedor.querySelectorAll('.' + claseItem + '.item-oculto');
@@ -578,7 +580,6 @@
             }
         }
 
-        // Lógica del Lightbox (Ampliación de Fotos)
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
@@ -603,7 +604,6 @@
             }
         });
 
-        // Lógica del Botón de WhatsApp
         function enviarWhatsApp() {
             const nombre = document.getElementById('nombre').value || '-';
             const edad = document.getElementById('edad').value || '-';
@@ -623,13 +623,12 @@
 
 Por favor, ayúdenme a diagnosticar mi protocolo ideal.`;
 
-            // EL NÚMERO YA ESTÁ CONFIGURADO CORRECTAMENTE AQUÍ
+            // Número configurado (Ibagué, Tolima, Colombia)
             const telefono = '573232356463'; 
             const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank');
         }
 
-        // Ejecutar revisión inicial para ocultar botones si no hay suficientes elementos
         document.addEventListener("DOMContentLoaded", function() {
             if(document.querySelectorAll('#grid-resultados .item-oculto').length === 0) document.getElementById('btn-more-resultados').style.display = 'none';
             if(document.querySelectorAll('#grid-videos .item-oculto').length === 0) document.getElementById('btn-more-videos').style.display = 'none';
