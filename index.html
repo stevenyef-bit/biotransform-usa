@@ -13,24 +13,22 @@
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; -webkit-tap-highlight-color: transparent; overflow-x: hidden; }
         html { font-size: 18px; overflow-x: hidden; }
 
-        /* Botones Masivos */
         .btn-massive {
             min-height: 72px; display: flex; align-items: center; justify-content: center;
             border-radius: 1.25rem; transition: transform 0.2s, background-color 0.3s; cursor: pointer;
         }
         .btn-massive:active { transform: scale(0.96); }
 
-        /* Contenedor de Video */
         .video-container {
             position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
-            border-radius: 1.25rem; box-shadow: 0 15px 35px -5px rgba(0,0,0,0.15);
+            border-radius: 1.25rem; box-shadow: 0 15px 35px -5px rgba(0,0,0,0.15); background-color: #000;
         }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .video-container video { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
+        }
 
-        /* Clases para el sistema de "Ver Más" */
         .item-oculto { display: none; }
 
-        /* Lightbox Mejorado (A prueba de adultos mayores) */
         .lightbox {
             display: none; position: fixed; inset: 0; z-index: 9000;
             background-color: rgba(15, 23, 42, 0.95); align-items: center; justify-content: center;
@@ -49,7 +47,6 @@
         .lightbox-close:hover { background-color: #dc2626; transform: scale(1.05); }
         .lightbox-close:active { transform: scale(0.95); }
 
-        /* Campos de Formulario */
         input, select {
             font-size: 1.15rem !important; padding: 1.2rem 1.5rem !important;
             border-width: 2px !important; border-color: #e2e8f0 !important; color: #0f172a !important; border-radius: 1rem !important;
@@ -58,7 +55,6 @@
         input:focus, select:focus { border-color: #2563eb !important; background-color: #ffffff !important; box-shadow: 0 0 15px rgba(37, 99, 235, 0.1); outline: none; }
         label { font-size: 1.15rem; font-weight: 800; color: #1e293b; }
 
-        /* Animación WhatsApp */
         @keyframes pulse-green {
             0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
             70% { box-shadow: 0 0 0 25px rgba(34, 197, 94, 0); }
@@ -116,7 +112,6 @@
             </div>
 
             <div class="space-y-12 mb-16">
-                
                 <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm relative">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-green-100 rounded-full flex items-center justify-center shrink-0">
@@ -129,7 +124,6 @@
                             </div>
                             <h3 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-words">Protocolo Noni GIA: Reset y Desinflamación</h3>
                             <p class="text-lg text-slate-600 font-medium mb-4">Un potente antioxidante que apoya tu sistema inmunológico. Limpia profundamente el tracto digestivo y elimina toxinas.</p>
-                            <p class="text-xs text-slate-500 font-bold mb-6 italic">* El valor final con envío incluido puede variar entre $4 a $6 USD extra dependiendo de la ciudad y estado de destino.</p>
                             
                             <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-slate-200 w-full">
                                 <div>
@@ -137,12 +131,11 @@
                                     <ul class="text-base text-slate-600 space-y-2 font-medium">
                                         <li>• Mejora digestión y desinflama el abdomen.</li>
                                         <li>• Mantiene un sistema cardiovascular saludable.</li>
-                                        <li>• Nutrientes para piel y cabello.</li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2"><i class="fa-solid fa-flask text-green-500 mr-2"></i> Ingredientes Activos</h4>
-                                    <p class="text-sm text-slate-500 font-medium">Polvo de frutas enteras de Noni, jugo de piña en polvo, jugo de uva Concord en polvo, maltodextrina y sabores naturales.</p>
+                                    <p class="text-sm text-slate-500 font-medium">Polvo de frutas enteras de Noni, jugo de piña en polvo, jugo de uva Concord en polvo.</p>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +143,7 @@
                 </div>
 
                 <div class="bg-slate-50 border-2 border-slate-100 rounded-3xl p-6 md:p-10 shadow-sm relative mt-10">
-                    <div class="absolute -top-5 right-5 md:right-10 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-black px-6 py-2 rounded-full text-sm shadow-lg transform rotate-2 z-10">MÁS POPULAR</div>
+                    <div class="absolute -top-5 right-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-black px-6 py-2 rounded-full text-sm shadow-lg transform rotate-2 z-10">MÁS POPULAR</div>
                     <div class="flex flex-col md:flex-row gap-8 items-start pt-2">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-bolt text-5xl md:text-7xl text-blue-600"></i>
@@ -161,8 +154,7 @@
                                 <span class="bg-blue-100 text-blue-800 font-black px-4 py-1.5 rounded-full text-xs uppercase"><i class="fa-solid fa-box mr-1"></i> $79 USD Aprox.</span>
                             </div>
                             <h3 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-words">Protocolo Blue: Energía y Combustible</h3>
-                            <p class="text-lg text-slate-600 font-medium mb-4">Convierte la grasa acumulada en energía pura. Aumenta tu rendimiento celular, potencia el enfoque mental y elimina los antojos.</p>
-                            <p class="text-xs text-slate-500 font-bold mb-6 italic">* El valor final con envío incluido puede variar entre $4 a $6 USD extra dependiendo de la ciudad y estado de destino.</p>
+                            <p class="text-lg text-slate-600 font-medium mb-4">Convierte la grasa acumulada en energía pura. Aumenta tu rendimiento celular y elimina los antojos.</p>
                             
                             <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-slate-200 w-full">
                                 <div>
@@ -170,12 +162,11 @@
                                     <ul class="text-base text-slate-600 space-y-2 font-medium">
                                         <li>• Aumenta la quema de grasa localizada.</li>
                                         <li>• Controla la ansiedad por el azúcar.</li>
-                                        <li>• Mejora drásticamente la cognición mental.</li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2"><i class="fa-solid fa-flask text-blue-500 mr-2"></i> Ingredientes Activos</h4>
-                                    <p class="text-sm text-slate-500 font-medium">Aminoácidos (Taurina, Glutamina), Guaraná, Hoja de té verde, Raíz de Maca, Corteza de sauce blanco, Acai, Aloe vera.</p>
+                                    <p class="text-sm text-slate-500 font-medium">Aminoácidos (Taurina, Glutamina), Guaraná, Hoja de té verde, Raíz de Maca.</p>
                                 </div>
                             </div>
                         </div>
@@ -193,8 +184,7 @@
                                 <span class="bg-pink-200 text-pink-800 font-black px-4 py-1.5 rounded-full text-xs uppercase"><i class="fa-solid fa-box mr-1"></i> $79 USD Aprox.</span>
                             </div>
                             <h3 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-words">Protocolo Pink: Balance Femenino</h3>
-                            <p class="text-lg text-slate-600 font-medium mb-4">Aborda las necesidades hormonales de la mujer de hoy. Desintoxica, protege contra infecciones y estabiliza desórdenes internos y hormonales.</p>
-                            <p class="text-xs text-slate-500 font-bold mb-6 italic">* El valor final con envío incluido puede variar entre $4 a $6 USD extra dependiendo de la ciudad y estado de destino.</p>
+                            <p class="text-lg text-slate-600 font-medium mb-4">Aborda las necesidades hormonales de la mujer. Desintoxica y estabiliza desórdenes internos y hormonales.</p>
                             
                             <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-pink-200 w-full">
                                 <div>
@@ -202,63 +192,17 @@
                                     <ul class="text-base text-slate-600 space-y-2 font-medium">
                                         <li class="font-extrabold text-pink-700">• Apoya en la reducción y control de quistes.</li>
                                         <li>• Tonifica abdomen, glúteos y busto.</li>
-                                        <li>• Alivia fuertes dolores menstruales.</li>
-                                        <li>• Previene infecciones del tracto urinario.</li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2"><i class="fa-solid fa-flask text-pink-500 mr-2"></i> Ingredientes Activos</h4>
-                                    <p class="text-sm text-slate-500 font-medium">Ashwagandha, Arándano, Granada, Café verde, Rhodiola, Coenzima Q10, Shilajit, Semilla de uva, Ácido alfa lipoico, Goji y aminoácidos clave.</p>
+                                    <p class="text-sm text-slate-500 font-medium">Ashwagandha, Arándano, Granada, Café verde, Coenzima Q10, Shilajit.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-red-50/40 border-2 border-red-200 rounded-3xl p-6 md:p-10 shadow-sm relative">
-                    <div class="flex flex-col md:flex-row gap-8 items-start">
-                        <div class="w-24 h-24 md:w-32 md:h-32 bg-red-100 rounded-full flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-fire text-5xl md:text-7xl text-red-600"></i>
-                        </div>
-                        <div class="flex-1 w-full">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-red-600 text-white font-black px-4 py-1.5 rounded-full text-xs uppercase">Exclusivo Hombres</span>
-                                <span class="bg-red-200 text-red-800 font-black px-4 py-1.5 rounded-full text-xs uppercase"><i class="fa-solid fa-box mr-1"></i> $79 USD Aprox.</span>
-                            </div>
-                            <h3 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-words">Protocolo Red: Vitalidad Masculina</h3>
-                            <p class="text-lg text-slate-600 font-medium mb-4">Diseñado para las necesidades metabólicas del hombre. Afecta positivamente los niveles hormonales para promover la virilidad y fuerza.</p>
-                            <p class="text-xs text-slate-500 font-bold mb-6 italic">* El valor final con envío incluido puede variar entre $4 a $6 USD extra dependiendo de la ciudad y estado de destino.</p>
-                            
-                            <div class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-red-200 w-full">
-                                <div>
-                                    <h4 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2"><i class="fa-solid fa-check text-red-500 mr-2"></i> Beneficios Principales</h4>
-                                    <ul class="text-base text-slate-600 space-y-2 font-medium">
-                                        <li>• Promueve virilidad y mejora función sexual.</li>
-                                        <li>• Aumenta rendimiento físico y masa magra.</li>
-                                        <li>• Reduce riesgo de hipertensión arterial.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-slate-900 mb-3 border-b border-slate-100 pb-2"><i class="fa-solid fa-flask text-red-500 mr-2"></i> Ingredientes Activos</h4>
-                                    <p class="text-sm text-slate-500 font-medium">Tribulus terrestris, Maca, Licopeno, Hoja de ortiga, Semilla de calabaza, Pygeum, Mucuma pruriens, Avena Sativa.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
-
-    <section class="py-12 px-5 bg-slate-100 w-full border-t border-b border-slate-200">
-        <div class="max-w-6xl mx-auto text-center">
-            <div class="inline-flex items-center bg-blue-100 text-blue-900 font-extrabold px-6 py-3 rounded-xl text-base md:text-lg mb-6 border border-blue-200 shadow-sm relative z-10">
-                <i class="fa-solid fa-user-lock mr-3 text-2xl text-blue-600"></i> Compromiso de Privacidad y Consentimiento
-            </div>
-            <p class="text-lg md:text-xl text-slate-700 max-w-4xl mx-auto leading-relaxed font-medium px-2">
-                Todas las imágenes y testimonios compartidos en esta sección pertenecen a personas reales que han completado nuestros protocolos y nos han autorizado <strong class="text-blue-700 font-bold">expresamente</strong> a mostrar sus resultados. Respetamos totalmente la privacidad: las fotos con rostros pixelados corresponden a quienes nos solicitaron anonimato, mientras que las fotos visibles cuentan con el consentimiento pleno de los participantes para validar la eficacia de BioTransform.
-            </p>
         </div>
     </section>
 
@@ -268,51 +212,21 @@
             <p class="text-center text-xl text-slate-400 mb-12 font-semibold px-2">Clic en la foto para ampliar.</p>
 
             <div id="grid-resultados" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                
-                <div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0001.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0002.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0003.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0004.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0005.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0006.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0007.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0008.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0009.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0010.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado item-oculto" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0011.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado item-oculto" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0012.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
-<div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado item-oculto" onclick="openLightbox(this)">
-    <img src="imagenes/01_page-0051.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
-</div>
+                <script>
+                    for(let i=1; i<=51; i++) {
+                        let numStr = i.toString().padStart(4, '0');
+                        let claseOculta = (i > 15) ? 'item-oculto' : '';
+                        document.write(`
+                            <div class="bg-slate-800 border border-slate-700 p-2 rounded-2xl cursor-pointer hover:border-blue-500 hover:scale-[1.03] transition-all item-resultado ${claseOculta}" onclick="openLightbox(this)">
+                                <img src="imagenes/01_page-${numStr}.jpg" class="w-full h-auto rounded-xl aspect-[3/4] object-cover">
+                            </div>
+                        `);
+                    }
+                </script>
             </div>
 
             <div class="text-center mt-10">
-                <button id="btn-more-resultados" onclick="cargarMas('grid-resultados', 'item-resultado', 'btn-more-resultados', 10)" class="bg-slate-800 text-white border border-slate-600 font-bold px-10 py-4 rounded-xl hover:bg-slate-700 transition-colors text-lg w-full md:w-auto">
+                <button id="btn-more-resultados" onclick="cargarMas('grid-resultados', 'item-resultado', 'btn-more-resultados', 15)" class="bg-slate-800 text-white border border-slate-600 font-bold px-10 py-4 rounded-xl hover:bg-slate-700 transition-colors text-lg w-full md:w-auto">
                     <i class="fa-solid fa-plus mr-2"></i> Ver Más Resultados
                 </button>
             </div>
@@ -326,48 +240,62 @@
             </h2>
             
             <div id="grid-videos" class="grid md:grid-cols-2 gap-10">
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
+                <script>
+                    const videosList = [
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583883/doctora_2_yndmvi.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583886/oni_rnsojh.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583883/doctora_jkv7hx.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583884/highlights_64323777_732937720456880_6194369277322386022_n_xgtr3r.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583890/WhatsApp_Video_2020-05-01_at_12.32.19_PM_z1a9ps.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583891/testinomio_3_esgofy.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583889/WhatsApp_Video_2020-04-04_at_12.12.34_PM_jh17yo.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583889/testimonio_1_tkuodr.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583889/pink_video_promo_yne8m0.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583889/resultado_tw5khr.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583888/noni_pink_m5yhv9.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583887/preparacin_blue_w8ivte.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583886/lynn_esc_77351694_811235435952482_412918858611922345_n_tqhxcv.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583885/maria_qpvr0z.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583884/highlights_60648912_423088701815718_2687160019055802710_n_kq6xqa.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583884/highlights_60136733_137529733989788_2002701059999129399_n_minczx.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583884/highlights_78861990_180040093139158_3316514259980703707_n_wronsn.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583884/lynn_esc_76227228_149490533222574_3967845236575496863_n_tjq6nt.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583884/ingrid_mdsc8x.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583883/desayu_anxtwy.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583883/highlights_57200714_421450485095608_2759735167511912253_n_var2jh.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583882/envios_u82qdz.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583882/cuidate_con_alex_97507050_166137104815659_3197424577713521936_n_rnsvlt.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583853/90483395_270717077262939_8558281530755360542_n_iv9w9l.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583853/BLUE_egvvin.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583852/anacruz4483_92129200_1086546618362492_7991253829857515852_n_pmjee8.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583852/andirmonti_92569746_254525392615748_1440530044965240830_n_hatg9z.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583852/blue_s_cn4cyh.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583852/91625775_511180346243202_8665826995517672366_n_muztc7.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583851/1_hav0c6.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583851/blue_promocion_v0ts0t.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583851/91628184_636396473881269_8534099932288816525_n_xgnwxu.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583850/91604134_252991162407818_7707979842872120557_n_l6onu3.mp4",
+                        "https://res.cloudinary.com/dmpjtrdtu/video/upload/v1772583850/91454177_2577607715892576_8049722148166611594_n_ivzrcg.mp4"
+                    ];
 
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video item-oculto w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
-                <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video item-oculto w-full">
-                    <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-                </div>
+                    videosList.forEach((url, index) => {
+                        let claseOculta = (index >= 15) ? 'item-oculto' : '';
+                        document.write(`
+                            <div class="bg-white p-5 rounded-3xl shadow-lg border border-slate-200 item-video ${claseOculta} w-full">
+                                <div class="video-container">
+                                    <video controls playsinline preload="metadata">
+                                        <source src="${url}" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        `);
+                    });
+                </script>
             </div>
 
             <div class="text-center mt-12">
-                <button id="btn-more-videos" onclick="cargarMas('grid-videos', 'item-video', 'btn-more-videos', 10)" class="bg-blue-100 text-blue-700 font-bold px-10 py-4 rounded-xl hover:bg-blue-200 transition-colors text-lg border border-blue-200 w-full md:w-auto">
-                    <i class="fa-brands fa-youtube mr-2"></i> Cargar Más Videos
+                <button id="btn-more-videos" onclick="cargarMas('grid-videos', 'item-video', 'btn-more-videos', 15)" class="bg-blue-100 text-blue-700 font-bold px-10 py-4 rounded-xl hover:bg-blue-200 transition-colors text-lg border border-blue-200 w-full md:w-auto">
+                    <i class="fa-solid fa-play mr-2"></i> Cargar Más Videos
                 </button>
             </div>
         </div>
@@ -381,50 +309,17 @@
             
             <div class="max-w-5xl mx-auto bg-blue-50 border border-blue-200 rounded-3xl p-6 md:p-8 mb-10 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full opacity-50 pointer-events-none"></div>
-                
                 <h3 class="text-xl md:text-2xl font-black text-slate-900 mb-6 text-center break-words relative z-10"><i class="fa-solid fa-shield-halved text-blue-600 mr-2"></i> Protocolo de Seguridad</h3>
                 <p class="text-center text-slate-600 font-medium mb-8 max-w-3xl mx-auto px-2 relative z-10">Para garantizar la protección de tus datos y evitar fraudes bancarios, nuestro sistema requiere dos pasos clave:</p>
                 
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 relative z-10 w-full">
                     <div class="bg-white p-5 md:p-6 rounded-2xl border border-blue-100 shadow-sm w-full">
                         <h4 class="font-black text-slate-900 mb-3 text-lg"><i class="fa-solid fa-message text-blue-500 mr-2"></i> 1. Verificación Temporal (SMS)</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">Al iniciar tu orden, el sistema te enviará un código de seguridad por mensaje de texto. Es vital <strong>enviarlo a tu asesora inmediatamente</strong>, ya que expira. Sin este código, no podremos generar tu enlace de pago seguro.</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Al iniciar tu orden, el sistema te enviará un código de seguridad por mensaje de texto. Es vital <strong>enviarlo a tu asesora inmediatamente</strong>, ya que expira.</p>
                     </div>
                     <div class="bg-white p-5 md:p-6 rounded-2xl border border-blue-100 shadow-sm w-full">
                         <h4 class="font-black text-slate-900 mb-3 text-lg"><i class="fa-solid fa-credit-card text-blue-500 mr-2"></i> 2. Facturación vs. Envío</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">Para que el banco apruebe la transacción, tu <strong>Dirección de Facturación</strong> debe ser exactamente la que tienes registrada en tu tarjeta. Tu <strong>Dirección de Envío</strong> puede ser diferente.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="max-w-5xl mx-auto bg-slate-50 border border-slate-200 rounded-3xl p-6 md:p-12 mb-16 shadow-sm w-full">
-                <p class="text-center text-lg md:text-xl text-slate-700 mb-10 font-bold px-2">
-                    Nuestro proceso de distribución es 100% transparente y monitoreado paso a paso:
-                </p>
-                
-                <div class="grid md:grid-cols-3 gap-10 w-full">
-                    <div class="text-center w-full">
-                        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-5 text-blue-600 text-2xl md:text-3xl shadow-inner">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                        </div>
-                        <h4 class="font-black text-slate-900 text-lg md:text-xl mb-3">1. Facturación Oficial</h4>
-                        <p class="text-sm md:text-base text-slate-600 font-medium leading-relaxed">Al procesar tu orden segura, recibirás de inmediato tu comprobante y recibo de factura emitido por la compañía.</p>
-                    </div>
-                    
-                    <div class="text-center w-full">
-                        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-5 text-amber-600 text-2xl md:text-3xl shadow-inner">
-                            <i class="fa-solid fa-barcode"></i>
-                        </div>
-                        <h4 class="font-black text-slate-900 text-lg md:text-xl mb-3">2. Guía de Rastreo</h4>
-                        <p class="text-sm md:text-base text-slate-600 font-medium leading-relaxed">En un plazo de <strong class="text-amber-700 font-extrabold">3 días hábiles</strong>, el laboratorio genera y emite tu número de rastreo oficial de UPS.</p>
-                    </div>
-                    
-                    <div class="text-center w-full">
-                        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-5 text-green-600 text-2xl md:text-3xl shadow-inner">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </div>
-                        <h4 class="font-black text-slate-900 text-lg md:text-xl mb-3">3. Monitoreo 1-a-1</h4>
-                        <p class="text-sm md:text-base text-slate-600 font-medium leading-relaxed">Podrás visualizar tu guía oficial, y tu asesora te la enviará a tu WhatsApp para acompañarte hasta la entrega.</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Para que el banco apruebe la transacción, tu <strong>Dirección de Facturación</strong> debe ser exactamente la que tienes registrada en tu tarjeta.</p>
                     </div>
                 </div>
             </div>
@@ -434,47 +329,22 @@
             </p>
             
             <div id="grid-entregas" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+1" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+2" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+3" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+4" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+5" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+6" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+7" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+8" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+9" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+10" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega item-oculto" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+11" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
-                <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega item-oculto" onclick="openLightbox(this)">
-                    <img src="https://placehold.co/600x600/f1f5f9/64748b?text=UPS+12" class="w-full h-auto rounded-xl aspect-square object-cover">
-                </div>
+                <script>
+                    const entregasNums = [5, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99, 102, 105, 108, 111, 114, 117, 120, 123, 126, 129, 132, 135, 138, 141, 147];
+                    
+                    entregasNums.forEach((num, index) => {
+                        let claseOculta = (index >= 15) ? 'item-oculto' : '';
+                        document.write(`
+                            <div class="bg-slate-50 border-2 border-slate-200 p-2 rounded-2xl cursor-pointer hover:border-amber-400 transition-all item-entrega ${claseOculta}" onclick="openLightbox(this)">
+                                <img src="imagenes/img${num}.jpg" class="w-full h-auto rounded-xl aspect-square object-cover">
+                            </div>
+                        `);
+                    });
+                </script>
             </div>
 
             <div class="text-center mt-12">
-                <button id="btn-more-entregas" onclick="cargarMas('grid-entregas', 'item-entrega', 'btn-more-entregas', 10)" class="bg-amber-100 text-amber-800 font-bold px-10 py-5 rounded-2xl hover:bg-amber-200 transition-colors text-lg border border-amber-200 shadow-sm w-full md:w-auto">
+                <button id="btn-more-entregas" onclick="cargarMas('grid-entregas', 'item-entrega', 'btn-more-entregas', 15)" class="bg-amber-100 text-amber-800 font-bold px-10 py-5 rounded-2xl hover:bg-amber-200 transition-colors text-lg border border-amber-200 shadow-sm w-full md:w-auto">
                     <i class="fa-solid fa-box-open mr-3"></i> Cargar Más Entregas Reales
                 </button>
             </div>
@@ -489,7 +359,7 @@
             </div>
             
             <h2 class="text-3xl md:text-5xl font-black text-slate-900 text-center mb-6 mt-10 md:mt-6 leading-tight tracking-tight break-words">Tu Evaluación Gratis</h2>
-            <p class="text-lg md:text-xl text-slate-600 text-center mb-12 font-semibold px-2">Ingresa tus datos para calcular tu IMC y enviarte el protocolo ideal directamente a tu WhatsApp.</p>
+            <p class="text-lg md:text-xl text-slate-600 text-center mb-12 font-semibold px-2">Ingresa tus datos para enviarte el protocolo ideal directamente a tu WhatsApp.</p>
 
             <div class="space-y-6 md:space-y-8 w-full">
                 <div class="w-full">
@@ -582,6 +452,7 @@
     </footer>
 
     <script>
+        // Función para cargar más elementos (Fotos o Videos)
         function cargarMas(contenedorId, claseItem, btnId, cantidadAMostrar) {
             const contenedor = document.getElementById(contenedorId);
             const itemsOcultos = contenedor.querySelectorAll('.' + claseItem + '.item-oculto');
@@ -596,6 +467,7 @@
             }
         }
 
+        // Sistema de Ampliación de Fotos (Lightbox)
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
@@ -620,6 +492,7 @@
             }
         });
 
+        // Envío de Datos a WhatsApp
         function enviarWhatsApp() {
             const nombre = document.getElementById('nombre').value || '-';
             const edad = document.getElementById('edad').value || '-';
@@ -644,10 +517,20 @@ Por favor, ayúdenme a diagnosticar mi protocolo ideal.`;
             window.open(url, '_blank');
         }
 
+        // Ocultar botones de "Ver más" si no hay más contenido
         document.addEventListener("DOMContentLoaded", function() {
-            if(document.querySelectorAll('#grid-resultados .item-oculto').length === 0) document.getElementById('btn-more-resultados').style.display = 'none';
-            if(document.querySelectorAll('#grid-videos .item-oculto').length === 0) document.getElementById('btn-more-videos').style.display = 'none';
-            if(document.querySelectorAll('#grid-entregas .item-oculto').length === 0) document.getElementById('btn-more-entregas').style.display = 'none';
+            if(document.querySelectorAll('#grid-resultados .item-oculto').length === 0) {
+                let btnResultados = document.getElementById('btn-more-resultados');
+                if(btnResultados) btnResultados.style.display = 'none';
+            }
+            if(document.querySelectorAll('#grid-videos .item-oculto').length === 0) {
+                let btnVideos = document.getElementById('btn-more-videos');
+                if(btnVideos) btnVideos.style.display = 'none';
+            }
+            if(document.querySelectorAll('#grid-entregas .item-oculto').length === 0) {
+                let btnEntregas = document.getElementById('btn-more-entregas');
+                if(btnEntregas) btnEntregas.style.display = 'none';
+            }
         });
     </script>
 </body>
